@@ -1,0 +1,42 @@
+{
+    "applications": {
+        "gecko": {
+            "strict_min_version": "53.0",
+            "id": "{b3a05b7a-5107-476e-9ccd-4727bae18ba0}"
+        }
+    },
+    "icons": {
+        "256": "icons/icon-256.png"
+    },
+    "version": "2018.7.24.14",
+    "background": {
+        "scripts": [
+            "/js/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "O2GExtension.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "tabs",
+        "contextMenus",
+        "activeTab",
+        "notifications"
+    ],
+    "browser_action": {
+        "default_title": "O2GExtension",
+        "default_popup": "html/popup.html",
+        "default_icon": "icons/icon-256.png"
+    },
+    "name": "O2GExtension",
+    "description": "Alpha",
+    "manifest_version": 2
+}

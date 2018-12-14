@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/popup.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+        <div class="box">
+            <div id="main">
+                <h1>O2GExtension</h1>
+                <div id="login" style="display: none">
+                    <img src="/icons/ALE-logo.png" id="logo" alt="Logo enterprise">
+                    <input type="text" placeholder="login" class="input" id="username"/>
+                    <input type="password" placeholder="password" class="input" id="password"/>
+                    <p id="loginError" style="display: none"></p>
+                    <a id="submitLogin">
+                        <div class="demibtn btn-green">Sign In</div>
+                    </a>               
+                    <a id="changeURLapi"><div class="demibtn btn-blue">Change API url</div></a>               
+                </div>
+
+                <div id="loading">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-eclipse">
+                        <path stroke="none" d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#ff72f6" transform="rotate(72 50 51)">
+                            <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+                        </path>
+                    </svg>
+                </div>
+                
+                <div id="content" style="display: none;"> 
+                    <input type="text" placeholder="Your device nbr" class="input" id="callerNumber"/>
+                    <input type="text" placeholder="Number to call" class="input" id="deviceNumber"/>
+                </div>
+
+                <div id="api" style="display: none">
+                    <img src="/icons/ALE-logo.png" id="logo" alt="Logo enterprise">
+                    <input type="url" placeholder="https://yourdomain/api/rest/" class="input" id="apiNewURL"/>
+                    <a id="submitApi"><div class="btn btn-green">Confirm</div></a>               
+                </div>
+
+                <div id="shortcut" style="display: none">
+                    <a id="call"><div class="demibtn btn-green">Call</div></a>
+                    <a id="logout"><div class="demibtn btn-red">Disconnect</div></a>               
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/js/popup.js"></script>
+</html>
